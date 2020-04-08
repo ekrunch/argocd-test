@@ -14,6 +14,9 @@
             limits:
               cpu: 500m
               memory: 128Mi
+        mtls:
+          enabled: false
+        disablePolicyChecks: false
 
       gateways:
         istio-egressgateway:
@@ -22,6 +25,7 @@
           autoscaleEnabled: false
 
       mixer:
+        enabled: true
         policy:
           autoscaleEnabled: false
 
@@ -36,6 +40,10 @@
               memory: 4G
 
       pilot:
+        resources:
+          requests:
+            cpu: 100m
+            memory: 128Mi
         autoscaleEnabled: false
         traceSampling: 100
 
