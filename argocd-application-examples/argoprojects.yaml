@@ -73,3 +73,18 @@ spec:
     path: argocd-project-examples/operators
     repoURL: https://github.com/ekrunch/argocd-test.git
     targetRevision: HEAD
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: openshift-metering
+  namespace: argocd
+spec:
+  destination:
+    namespace: openshift-metering
+    server: 'https://kubernetes.default.svc'
+  project: default
+  source:
+    path: argocd-project-examples/metering
+    repoURL: https://github.com/ekrunch/argocd-test.git
+    targetRevision: HEAD
