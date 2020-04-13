@@ -1,9 +1,0 @@
-apiVersion: maistra.io/v1
-kind: ServiceMeshMember
-metadata:
-  name: default
-  namespace: bookinfo
-spec:
-  controlPlaneRef:
-    name: full-install
-    namespace: istio-system
