@@ -85,6 +85,9 @@ spec:
     server: 'https://kubernetes.default.svc'
   project: default
   source:
+    directory:
+      jsonnet: {}
+      recurse: true
     path: argocd-project-examples/metering
     repoURL: https://github.com/ekrunch/argocd-test.git
     targetRevision: HEAD
