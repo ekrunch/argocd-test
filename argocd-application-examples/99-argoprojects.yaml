@@ -10,7 +10,7 @@ spec:
     server: 'https://kubernetes.default.svc'
   project: default
   source:
-    path: amqstreams
+    path: argocd-project-examples/amqstreams
     repoURL: https://github.com/ekrunch/argocd-test.git
     targetRevision: HEAD
 ---
@@ -25,7 +25,7 @@ spec:
     server: 'https://kubernetes.default.svc'
   project: default
   source:
-    path: bookinfo
+    path: argocd-project-examples/bookinfo
     repoURL: https://github.com/ekrunch/argocd-test.git
     targetRevision: HEAD
 ---
@@ -40,7 +40,7 @@ spec:
     server: 'https://kubernetes.default.svc'
   project: default
   source:
-    path: codereadyworkspaces
+    path: argocd-project-examples/codereadyworkspaces
     repoURL: https://github.com/ekrunch/argocd-test.git
     targetRevision: HEAD
 ---
@@ -55,7 +55,7 @@ spec:
     server: 'https://kubernetes.default.svc'
   project: default
   source:
-    path: servicemesh
+    path: argocd-project-examples/servicemesh
     repoURL: https://github.com/ekrunch/argocd-test.git
     targetRevision: HEAD
 ---
@@ -70,6 +70,6 @@ spec:
     server: 'https://kubernetes.default.svc'
   project: default
   source:
-    path: operators
+    path: argocd-project-examples/operators
     repoURL: https://github.com/ekrunch/argocd-test.git
     targetRevision: HEAD
