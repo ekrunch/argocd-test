@@ -3,7 +3,7 @@
   metadata:
     name: full-install
   spec:
-
+    verion: v1.1
     istio:
       global:
         proxy:
@@ -23,12 +23,12 @@
           autoscaleEnabled: false
         istio-ingressgateway:
           autoscaleEnabled: false
+          ior_enabled: false
 
       mixer:
         enabled: true
         policy:
           autoscaleEnabled: false
-
         telemetry:
           autoscaleEnabled: false
           resources:
