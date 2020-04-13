@@ -3,12 +3,9 @@ kind: Subscription
 metadata:
   name: metering-ocp
   namespace: openshift-metering
-  olm.operatorGroup: openshift-metering
 spec:
-  installModeType: OwnNamespace
   channel: "4.3"
   installPlanApproval: Automatic
   name: metering-ocp
   source: redhat-operators
   sourceNamespace: openshift-marketplace
-  targetNamespace: openshift-metering
