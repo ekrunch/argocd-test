@@ -3,7 +3,6 @@ kind: Subscription
 metadata:
   name: "codeready-workspaces"
   namespace: "codereadyworkspaces" 
-  olm.operatorGroup: codereadyworkspaces
 spec:
   channel: "latest" 
   installPlanApproval: "Automatic"
