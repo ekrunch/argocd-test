@@ -1,0 +1,75 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: amqstreams
+  namespace: argocd
+spec:
+  destination:
+    namespace: amqstreams
+    server: 'https://kubernetes.default.svc'
+  project: default
+  source:
+    path: amqstreams
+    repoURL: https://github.com/ekrunch/argocd-test.git
+    targetRevision: HEAD
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: bookinfo
+  namespace: argocd
+spec:
+  destination:
+    namespace: bookinfo
+    server: 'https://kubernetes.default.svc'
+  project: default
+  source:
+    path: bookinfo
+    repoURL: https://github.com/ekrunch/argocd-test.git
+    targetRevision: HEAD
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: codereadyworkspaces
+  namespace: argocd
+spec:
+  destination:
+    namespace: codereadyworkspaces
+    server: 'https://kubernetes.default.svc'
+  project: default
+  source:
+    path: codereadyworkspaces
+    repoURL: https://github.com/ekrunch/argocd-test.git
+    targetRevision: HEAD
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: openshift-service-mesh
+  namespace: argocd
+spec:
+  destination:
+    namespace: istio-system
+    server: 'https://kubernetes.default.svc'
+  project: default
+  source:
+    path: servicemesh
+    repoURL: https://github.com/ekrunch/argocd-test.git
+    targetRevision: HEAD
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: openshift-operators
+  namespace: argocd
+spec:
+  destination:
+    namespace: openshift-operators
+    server: 'https://kubernetes.default.svc'
+  project: default
+  source:
+    path: operators
+    repoURL: https://github.com/ekrunch/argocd-test.git
+    targetRevision: HEAD
