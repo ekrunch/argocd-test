@@ -1,7 +1,7 @@
   apiVersion: maistra.io/v1
   kind: ServiceMeshControlPlane
   metadata:
-    name: full-install
+    name: basic-install
   spec:
     verion: v1.1
     istio:
