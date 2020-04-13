@@ -3,7 +3,6 @@
   metadata:
     name: basic-install
   spec:
-    verion: v1.1
     istio:
       global:
         proxy:
