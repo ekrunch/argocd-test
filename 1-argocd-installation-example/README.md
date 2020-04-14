@@ -1,5 +1,7 @@
 # argocd-installation-example
-An example for creating an ArgoCD Server instance using the ArgoCD Operator
+An example for creating an ArgoCD Server instance using the ArgoCD Operator, please review the 4-argo-groups.yaml file to assign your OCP users into the required groups. This demo uses Openshift OAuth.
+
+The default admin user is 'admin' and the password is the name of the pod deployed by the operator, get the pod name using the command __'oc get pods -n argocd -l app.kubernetes.io/name=demolab-argocd-server -o name'__
 
 Instructions
 

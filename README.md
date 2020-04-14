@@ -1,11 +1,13 @@
 # argocd-test
-My Test Repo for ArgoCD running on Openshift
+My Test Repo for ArgoCD running on Openshift. Provides a demo which syncs various application data and operators.
 
-Instructions
+__Instructions__
 
-- Install ArgoCD Using the ArgoCD Operator (https://github.com/argoproj-labs/argocd-operator)
-  - More documentation can be found in the official documentation at https://argocd-operator.readthedocs.io/
-- Connect ArgoCD to a git repo (The examples will connect it to this GitHub Repo)
-- Create namespaces and assign ArgoCD the required permissions. Examples namespaces for the demo are located in the "namespaces" directory. Example permission scripts, either by namespace or by cluster are in the "permissions" directory. Note that using Cluster Admin for the ArgoCD Service Account is the easiest way but using individual namespace permissions is safer. Your call.
-- Create applications that sync to the respective paths in the repo. Examples are located in the "argocd-application-examples" directory, adjust git repos in the app definitions as needed
-- Deploy applications into ArgoCD and sync repos
+There are 5 folders, numbered in the order that they will be used in this demo
+
+- **1-argocd-installation-example** - Installs ArgoCD using the ArgoCD Operator (note: Creates a namespace called argocd and creates required operatorgroups and subscription resources)
+- **2-demo-namespaces** - Creates the namespaces used by this project. Feel free to omit some of these if you're already using them. This demo installs Istio with the Bookinfo sample, Metering, Codeready Workspaces, and AMQ Streams
+- **3-permissions** - Assigns the required permissions. The easiest way is to assign the ArgoCD Service User as a clsuter admin (there is an example YAML and shell script for doing this)
+  - Per namespace permissions can also be used but more permissions might be needed. The sample per-namespace permissions provided here only give the ArgoCD service user "edit" rights on the namespaces
+- **4-argocd-projects** - Creates the ArgoCD Project and Applications
+- **5-example-data** - Contains the demo files that the above projects will sync to.
