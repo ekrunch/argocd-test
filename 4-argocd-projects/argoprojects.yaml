@@ -106,3 +106,21 @@ spec:
     path: 5-example-data/metering
     repoURL: https://github.com/ekrunch/argocd-test.git
     targetRevision: HEAD
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: developertools
+  namespace: argocd
+spec:
+  destination:
+    namespace: developertools
+    server: 'https://kubernetes.default.svc'
+  project: demolab
+  source:
+    directory:
+      jsonnet: {}
+      recurse: true
+    path: 5-example-data/developertools
+    repoURL: https://github.com/ekrunch/argocd-test.git
+    targetRevision: HEAD
