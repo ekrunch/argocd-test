@@ -1,0 +1,13 @@
+kind: Group
+apiVersion: user.openshift.io/v1
+metadata:
+  name: argocd-users
+users: null
+---
+kind: Group
+apiVersion: user.openshift.io/v1
+metadata:
+  name: argocd-admins
+users:
+  - idadmin
+  - epresutt@redhat.com

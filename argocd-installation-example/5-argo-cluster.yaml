@@ -1,0 +1,28 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ArgoCD
+metadata:
+  name: demolab-argocd
+  namespace: argocd
+spec:
+  dex:
+    image: quay.io/ablock/dex
+    version: openshift-connector
+    openShiftOAuth: true
+  grafana:
+    enabled: true
+    route: true
+  prometheus:
+    enabled: true
+    route: true
+  rbac:
+    defaultPolicy: 'role:readonly'
+    policy: |
+      g, argocd-users, role:readonly
+      g, argocd-admins, role:admin
+    scopes: '[groups]'
+  applicationInstanceLabelKey: unixwarhammer.com/argoappname
+  repositories: |
+    - url: https://github.com/ekrunch/argocd-test.git
+  server:
+    enabled: true
+    route: true
