@@ -94,3 +94,18 @@ spec:
     path: 5-example-data/developertools
     repoURL: https://github.com/ekrunch/argocd-test.git
     targetRevision: HEAD
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ossm-app-of-apps
+  namespace: argocd
+spec:
+  destination:
+    namespace: default
+    server: 'https://kubernetes.default.svc'
+  project: demolab
+  source:
+    path: 5-example-data/ossm-app-of-apps
+    repoURL: 'https://github.com/ekrunch/argocd-test.git'
+    targetRevision: HEAD
