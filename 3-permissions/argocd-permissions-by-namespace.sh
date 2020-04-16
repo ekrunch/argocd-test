@@ -5,7 +5,8 @@ oc policy add-role-to-user edit system:serviceaccount:argocd:argocd-application-
 oc policy add-role-to-user edit system:serviceaccount:argocd:argocd-application-controller -n bookinfo
 oc policy add-role-to-user edit system:serviceaccount:argocd:argocd-application-controller -n developer1
 oc policy add-role-to-user edit system:serviceaccount:argocd:argocd-application-controller -n developer2
-oc policy add-role-to-user edit system:serviceaccount:argocd:argocd-application-controller -n istio-system
-oc policy add-role-to-user edit system:serviceaccount:argocd:argocd-application-controller -n openshift-operators
-oc policy add-role-to-user edit system:serviceaccount:argocd:argocd-application-controller -n openshift-metering
 oc policy add-role-to-user edit system:serviceaccount:argocd:argocd-application-controller -n developertools
+oc policy add-role-to-user edit system:serviceaccount:argocd:argocd-application-controller -n istio-system
+oc policy add-role-to-user edit system:serviceaccount:argocd:argocd-application-controller -n openshift-metering
+oc policy add-role-to-user edit system:serviceaccount:argocd:argocd-application-controller -n openshift-nfd
+oc policy add-role-to-user edit system:serviceaccount:argocd:argocd-application-controller -n openshift-operators

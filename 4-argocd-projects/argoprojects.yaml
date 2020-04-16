@@ -117,3 +117,18 @@ spec:
     path: 5-example-data/ossm-app-of-apps
     repoURL: 'https://github.com/ekrunch/argocd-test.git'
     targetRevision: HEAD
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nfd
+  namespace: argocd
+spec:
+  destination:
+    namespace: openshift-nfd
+    server: 'https://kubernetes.default.svc'
+  project: demolab
+  source:
+    path: 5-example-data/nfd
+    repoURL: 'https://github.com/ekrunch/argocd-test.git'
+    targetRevision: HEAD
