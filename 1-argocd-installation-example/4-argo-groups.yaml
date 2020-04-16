@@ -11,3 +11,19 @@ metadata:
 users:
   - idadmin
   - epresutt@redhat.com
+---
+kind: Group
+apiVersion: user.openshift.io/v1
+metadata:
+  name: developerteam1
+users:
+  - developer1
+  - developer2
+---
+kind: Group
+apiVersion: user.openshift.io/v1
+metadata:
+  name: developerteam2
+users:
+  - developer3
+  - developer4

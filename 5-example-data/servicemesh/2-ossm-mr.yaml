@@ -5,6 +5,6 @@ metadata:
   namespace: istio-system
 spec:
   members:
-    - developer1
-    - developer2
+    - developerteam1
+    - developerteam2
     - bookinfo
