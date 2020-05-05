@@ -5,8 +5,8 @@ metadata:
   namespace: argocd
 spec:
   dex:
-    image: quay.io/ablock/dex
-    version: openshift-connector
+    image: quay.io/redhat-cop/dex
+    version: v2.22.0-openshift
     openShiftOAuth: true
   grafana:
     enabled: true
@@ -17,6 +17,7 @@ spec:
   rbac:
     defaultPolicy: 'role:readonly'
     policy: |
+      g, system:cluster-admins, role:admin
       g, argocd-users, role:readonly
       g, argocd-admins, role:admin
     scopes: '[groups]'
