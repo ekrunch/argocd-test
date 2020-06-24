@@ -144,6 +144,9 @@ spec:
     server: 'https://kubernetes.default.svc'
   project: demolab
   source:
+    directory:
+      jsonnet: {}
+      recurse: true
     path: 5-example-data/nfs-provisioner
     repoURL: 'https://github.com/ekrunch/argocd-test.git'
     targetRevision: HEAD
