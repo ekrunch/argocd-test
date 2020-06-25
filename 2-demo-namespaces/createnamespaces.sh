@@ -8,4 +8,3 @@ oc create -f devtools.yaml
 oc create -f istio-system-ns.yaml
 oc create -f metering-ns.yaml
 oc create -f openshift-nfd-ns.yaml
-oc create -f nfs-provisioner-ns.yaml
