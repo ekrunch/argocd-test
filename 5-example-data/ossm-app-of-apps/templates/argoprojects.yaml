@@ -14,7 +14,7 @@ spec:
     targetRevision: HEAD
   syncPolicy:
     automated:
-      selfHeal: true
+      selfHeal: false
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: Application
@@ -37,4 +37,4 @@ spec:
     targetRevision: HEAD
   syncPolicy:
     automated:
-      selfHeal: true
+      selfHeal: false
