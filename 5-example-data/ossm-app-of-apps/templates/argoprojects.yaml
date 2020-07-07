@@ -12,9 +12,6 @@ spec:
     path: 5-example-data/bookinfo
     repoURL: https://github.com/ekrunch/argocd-test.git
     targetRevision: HEAD
-  syncPolicy:
-    automated:
-      selfHeal: false
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: Application
@@ -35,6 +32,3 @@ spec:
     path: 5-example-data/servicemesh
     repoURL: https://github.com/ekrunch/argocd-test.git
     targetRevision: HEAD
-  syncPolicy:
-    automated:
-      selfHeal: false
