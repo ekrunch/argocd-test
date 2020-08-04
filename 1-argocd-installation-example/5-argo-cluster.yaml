@@ -16,14 +16,14 @@ spec:
     scopes: '[groups]'
   repositories: |
     - url: https://github.com/ekrunch/argocd-test.git
-  grafana:
-    enabled: true
-    route:
-      enabled: true
-  prometheus:
-    enabled: true
-    route:
-      enabled: true
+      #  grafana:
+      #    enabled: true
+      #    route:
+      #      enabled: true
+      #  prometheus:
+      #    enabled: true
+      #    route:
+      #      enabled: true
   server:
     route: 
       enabled: true
