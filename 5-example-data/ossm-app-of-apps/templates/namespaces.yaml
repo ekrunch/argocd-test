@@ -11,4 +11,8 @@ metadata:
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: openshift-operators-redhat
+  name: openshift-operators-redhat 
+  annotations:
+    openshift.io/node-selector: ""
+  labels:
+    openshift.io/cluster-monitoring: "true" 
