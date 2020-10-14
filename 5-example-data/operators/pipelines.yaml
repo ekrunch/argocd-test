@@ -7,5 +7,5 @@ spec:
   channel: ocp-4.5
   installPlanApproval: Automatic
   name: openshift-pipelines-operator-rh
-  source: openshift-marketplace
+  source: redhat-operators
   sourceNamespace: openshift-marketplace
